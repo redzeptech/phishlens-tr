@@ -9,3 +9,18 @@ Python 3 yeterlidir.
 ## Çalıştırma
 ```bash
 python phishlens.py
+## Rapor Kaydı
+Raporu otomatik isimle kaydetmek için:
+```bash
+python phishlens.py
+python phishlens.py --output rapor.txt
+
+---
+
+## 4) Test et (Windows terminal)
+
+Repo klasöründe:
+
+```bash
+python phishlens.py
+python phishlens.py --output rapor.txt
