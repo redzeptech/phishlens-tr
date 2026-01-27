@@ -31,3 +31,5 @@ python phishlens.py
 python phishlens.py --output rapor.txt
 **Commit changes…**
 Update README for report export
+## Sorumluluk Reddi
+Bu araç eğitim ve farkındalık amaçlıdır. Adli incelemenin, hukuki değerlendirmenin veya uzman analizinin yerini tutmaz.
