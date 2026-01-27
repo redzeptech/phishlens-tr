@@ -14,6 +14,11 @@ Raporu otomatik isimle kaydetmek için:
 ```bash
 python phishlens.py
 python phishlens.py --output rapor.txt
+## Rapor Kaydı
+Raporu belirli bir dosya adına kaydetmek için:
+```bash
+python phishlens.py --output rapor.txt
+
 
 ---
 
@@ -24,3 +29,5 @@ Repo klasöründe:
 ```bash
 python phishlens.py
 python phishlens.py --output rapor.txt
+**Commit changes…**
+Update README for report export
