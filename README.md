@@ -1,4 +1,6 @@
-# PhishLens TR
+
+# P<img width="981" height="508" alt="PhishLens" src="https://github.com/user-attachments/assets/178666dc-a811-4494-b8b6-eee5e9cbbf20" />
+hishLens TR
 
 PhishLens TR, eğitim ve farkındalık amaçlı basit bir mesaj analiz aracıdır.
 Şüpheli SMS/e-posta metninde sosyal mühendislik işaretleri ve bağlantı izleri üzerinden kural tabanlı bir risk skoru üretir.
