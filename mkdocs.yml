@@ -1,28 +1,10 @@
-site_name: PhishLens-TR Dokümantasyon
+site_name: PhishLens-TR
+site_url: https://redzeptech.github.io/phishlens-tr/
+repo_url: https://github.com/redzeptech/phishlens-tr
 
 theme:
   name: material
   language: tr
-  palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-7
-        name: Koyu moda geç
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-4
-        name: Açık moda geç
-
-features:
-  - search.suggest
-  - search.highlight
-  - content.tabs.link
 
 plugins:
   - search
@@ -31,17 +13,11 @@ plugins:
         python:
           paths: [src]
           options:
-            show_source: true
             show_root_heading: true
-            show_root_full_path: false
-            show_symbol_type_heading: true
+            show_source: true
 
 nav:
   - Giriş: index.md
-  - Kurulum: installation.md
-  - Kullanım Rehberi: usage.md
-  - API Referansı:
-      - Manuel Özet: api-referansi.md
-      - Scanner (Otomatik): api.md
-  - İstatistikler: istatistikler.md
-  - Katkıda Bulunma: contributing.md
+  - Kurulum: wiki/Kurulum.md
+  - Yapılandırma: wiki/Yapilandirma.md
+  - Özellikler: wiki/Ozellikler.md
