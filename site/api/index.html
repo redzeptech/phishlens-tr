@@ -509,10 +509,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#phishlens.scanner.Scanner.save_result_to_log" class="md-nav__link">
+  <a href="#phishlens.scanner.Scanner.analyze_content" class="md-nav__link">
     <span class="md-ellipsis">
       
-        save_result_to_log
+        analyze_content
       
     </span>
   </a>
@@ -520,10 +520,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#phishlens.scanner.Scanner.analyze_content" class="md-nav__link">
+  <a href="#phishlens.scanner.Scanner.analyze_metadata" class="md-nav__link">
     <span class="md-ellipsis">
       
-        analyze_content
+        analyze_metadata
       
     </span>
   </a>
@@ -542,10 +542,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#phishlens.scanner.Scanner.analyze_metadata" class="md-nav__link">
+  <a href="#phishlens.scanner.Scanner.save_result_to_log" class="md-nav__link">
     <span class="md-ellipsis">
       
-        analyze_metadata
+        save_result_to_log
       
     </span>
   </a>
@@ -738,10 +738,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#phishlens.scanner.Scanner.save_result_to_log" class="md-nav__link">
+  <a href="#phishlens.scanner.Scanner.analyze_content" class="md-nav__link">
     <span class="md-ellipsis">
       
-        save_result_to_log
+        analyze_content
       
     </span>
   </a>
@@ -749,10 +749,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#phishlens.scanner.Scanner.analyze_content" class="md-nav__link">
+  <a href="#phishlens.scanner.Scanner.analyze_metadata" class="md-nav__link">
     <span class="md-ellipsis">
       
-        analyze_content
+        analyze_metadata
       
     </span>
   </a>
@@ -771,10 +771,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#phishlens.scanner.Scanner.analyze_metadata" class="md-nav__link">
+  <a href="#phishlens.scanner.Scanner.save_result_to_log" class="md-nav__link">
     <span class="md-ellipsis">
       
-        analyze_metadata
+        save_result_to_log
       
     </span>
   </a>
@@ -1673,115 +1673,6 @@
 <div class="doc doc-object doc-function">
 
 
-<h4 id="phishlens.scanner.Scanner.save_result_to_log" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">save_result_to_log</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></code>
-
-</h4>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Analiz sonucunu logs/analysis_history.jsonl dosyasına ekler.</p>
-
-
-            <details class="mkdocstrings-source">
-              <summary>Source code in <code>src\phishlens\scanner.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 95</span>
-<span class="normal"> 96</span>
-<span class="normal"> 97</span>
-<span class="normal"> 98</span>
-<span class="normal"> 99</span>
-<span class="normal">100</span>
-<span class="normal">101</span>
-<span class="normal">102</span>
-<span class="normal">103</span>
-<span class="normal">104</span>
-<span class="normal">105</span>
-<span class="normal">106</span>
-<span class="normal">107</span>
-<span class="normal">108</span>
-<span class="normal">109</span>
-<span class="normal">110</span>
-<span class="normal">111</span>
-<span class="normal">112</span>
-<span class="normal">113</span>
-<span class="normal">114</span>
-<span class="normal">115</span>
-<span class="normal">116</span>
-<span class="normal">117</span>
-<span class="normal">118</span>
-<span class="normal">119</span>
-<span class="normal">120</span>
-<span class="normal">121</span>
-<span class="normal">122</span>
-<span class="normal">123</span>
-<span class="normal">124</span>
-<span class="normal">125</span>
-<span class="normal">126</span>
-<span class="normal">127</span>
-<span class="normal">128</span>
-<span class="normal">129</span>
-<span class="normal">130</span>
-<span class="normal">131</span>
-<span class="normal">132</span>
-<span class="normal">133</span>
-<span class="normal">134</span>
-<span class="normal">135</span>
-<span class="normal">136</span>
-<span class="normal">137</span>
-<span class="normal">138</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">save_result_to_log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">:</span> <span class="n">ScanResult</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Analiz sonucunu logs/analysis_history.jsonl dosyasına ekler.&quot;&quot;&quot;</span>
-    <span class="n">log_dir</span> <span class="o">=</span> <span class="n">_PROJECT_ROOT</span> <span class="o">/</span> <span class="s2">&quot;logs&quot;</span>
-    <span class="n">log_dir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">log_path</span> <span class="o">=</span> <span class="n">log_dir</span> <span class="o">/</span> <span class="s2">&quot;analysis_history.jsonl&quot;</span>
-
-    <span class="n">hits</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;hits&quot;</span><span class="p">,</span> <span class="p">{})</span>
-    <span class="n">urls</span> <span class="o">=</span> <span class="n">hits</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;urls&quot;</span><span class="p">,</span> <span class="p">[])</span> <span class="ow">or</span> <span class="p">[]</span>
-
-    <span class="n">detected_rules</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;words&quot;</span><span class="p">,</span> <span class="s2">&quot;official&quot;</span><span class="p">,</span> <span class="s2">&quot;tlds&quot;</span><span class="p">,</span> <span class="s2">&quot;regex&quot;</span><span class="p">,</span> <span class="s2">&quot;domain_similarity&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;url_heuristics&quot;</span><span class="p">,</span> <span class="s2">&quot;email_auth&quot;</span><span class="p">):</span>
-        <span class="n">val</span> <span class="o">=</span> <span class="n">hits</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">val</span><span class="p">:</span>
-            <span class="n">detected_rules</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize_for_json</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
-
-    <span class="n">brands</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">domain_sim</span> <span class="o">=</span> <span class="n">hits</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;domain_similarity&quot;</span><span class="p">,</span> <span class="p">[])</span> <span class="ow">or</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">domain_sim</span><span class="p">:</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">))</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
-            <span class="n">known</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">known</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-                <span class="n">brand</span> <span class="o">=</span> <span class="n">known</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
-                <span class="k">if</span> <span class="n">brand</span> <span class="ow">and</span> <span class="n">brand</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">brands</span><span class="p">:</span>
-                    <span class="n">brands</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">brand</span><span class="p">)</span>
-    <span class="n">official_map</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ptt&quot;</span><span class="p">:</span> <span class="s2">&quot;PTT&quot;</span><span class="p">,</span> <span class="s2">&quot;edevlet&quot;</span><span class="p">:</span> <span class="s2">&quot;E-Devlet&quot;</span><span class="p">,</span> <span class="s2">&quot;e-devlet&quot;</span><span class="p">:</span> <span class="s2">&quot;E-Devlet&quot;</span><span class="p">,</span>
-                    <span class="s2">&quot;banka&quot;</span><span class="p">:</span> <span class="s2">&quot;Banka&quot;</span><span class="p">,</span> <span class="s2">&quot;vergi&quot;</span><span class="p">:</span> <span class="s2">&quot;Vergi&quot;</span><span class="p">,</span> <span class="s2">&quot;kargo&quot;</span><span class="p">:</span> <span class="s2">&quot;Kargo&quot;</span><span class="p">,</span> <span class="s2">&quot;icra&quot;</span><span class="p">:</span> <span class="s2">&quot;İcra&quot;</span><span class="p">}</span>
-    <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">hits</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;official&quot;</span><span class="p">,</span> <span class="p">[])</span> <span class="ow">or</span> <span class="p">[]:</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-            <span class="n">brand</span> <span class="o">=</span> <span class="n">official_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="n">term</span><span class="o">.</span><span class="n">title</span><span class="p">())</span>
-            <span class="k">if</span> <span class="n">brand</span> <span class="ow">and</span> <span class="n">brand</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">brands</span><span class="p">:</span>
-                <span class="n">brands</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">brand</span><span class="p">)</span>
-
-    <span class="n">entry</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(),</span>
-        <span class="s2">&quot;urls&quot;</span><span class="p">:</span> <span class="n">urls</span><span class="p">,</span>
-        <span class="s2">&quot;risk_score&quot;</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;score&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
-        <span class="s2">&quot;risk_level&quot;</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;risk&quot;</span><span class="p">,</span> <span class="s2">&quot;DÜŞÜK&quot;</span><span class="p">),</span>
-        <span class="s2">&quot;detected_rules&quot;</span><span class="p">:</span> <span class="n">detected_rules</span><span class="p">,</span>
-        <span class="s2">&quot;brand&quot;</span><span class="p">:</span> <span class="n">brands</span><span class="p">,</span>
-    <span class="p">}</span>
-
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">log_path</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">entry</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-            </details>
-    </div>
-
-</div>
-
-<div class="doc doc-object doc-function">
-
-
 <h4 id="phishlens.scanner.Scanner.analyze_content" class="doc doc-heading">
 <code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">analyze_content</span><span class="p">(</span><span class="n">text</span><span class="p">)</span></code>
 
@@ -1922,6 +1813,105 @@
         <span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>
 
     <span class="k">return</span> <span class="n">score</span><span class="p">,</span> <span class="n">hits</span>
+</code></pre></div></td></tr></table></div>
+            </details>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="phishlens.scanner.Scanner.analyze_metadata" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">analyze_metadata</span><span class="p">(</span><span class="n">eml_data</span><span class="p">)</span></code>
+
+</h4>
+
+
+    <div class="doc doc-contents ">
+
+        <p>E-posta metadata analizi: SPF, DKIM, DMARC.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>eml_data</code>
+            </td>
+            <td>
+                  <code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>eml_parser.parse_eml() çıktısı.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code><span title="tuple">tuple</span>[<span title="int">int</span>, <span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>(skor, auth_result) - auth_result: email_auth sözlüğü.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+            <details class="mkdocstrings-source">
+              <summary>Source code in <code>src\phishlens\scanner.py</code></summary>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">analyze_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">eml_data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;E-posta metadata analizi: SPF, DKIM, DMARC.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        eml_data: eml_parser.parse_eml() çıktısı.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        (skor, auth_result) - auth_result: email_auth sözlüğü.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">auth</span> <span class="o">=</span> <span class="n">analyze_email_auth</span><span class="p">(</span><span class="n">eml_data</span><span class="p">)</span>
+    <span class="n">score</span> <span class="o">=</span> <span class="n">auth</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;score_added&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">score</span><span class="p">,</span> <span class="n">auth</span>
 </code></pre></div></td></tr></table></div>
             </details>
     </div>
@@ -2106,96 +2096,106 @@
 <div class="doc doc-object doc-function">
 
 
-<h4 id="phishlens.scanner.Scanner.analyze_metadata" class="doc doc-heading">
-<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">analyze_metadata</span><span class="p">(</span><span class="n">eml_data</span><span class="p">)</span></code>
+<h4 id="phishlens.scanner.Scanner.save_result_to_log" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <code class="highlight language-python"><span class="n">save_result_to_log</span><span class="p">(</span><span class="n">result</span><span class="p">)</span></code>
 
 </h4>
 
 
     <div class="doc doc-contents ">
 
-        <p>E-posta metadata analizi: SPF, DKIM, DMARC.</p>
-
-
-<p><span class="doc-section-title">Parameters:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Description</th>
-          <th>Default</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                <code>eml_data</code>
-            </td>
-            <td>
-                  <code><span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>eml_parser.parse_eml() çıktısı.</p>
-              </div>
-            </td>
-            <td>
-                <em>required</em>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-
-    <p><span class="doc-section-title">Returns:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                  <code><span title="tuple">tuple</span>[<span title="int">int</span>, <span title="dict">dict</span>[<span title="str">str</span>, <span title="typing.Any">Any</span>]]</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>(skor, auth_result) - auth_result: email_auth sözlüğü.</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
+        <p>Analiz sonucunu logs/analysis_history.jsonl dosyasına ekler.</p>
 
 
             <details class="mkdocstrings-source">
               <summary>Source code in <code>src\phishlens\scanner.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">229</span>
-<span class="normal">230</span>
-<span class="normal">231</span>
-<span class="normal">232</span>
-<span class="normal">233</span>
-<span class="normal">234</span>
-<span class="normal">235</span>
-<span class="normal">236</span>
-<span class="normal">237</span>
-<span class="normal">238</span>
-<span class="normal">239</span>
-<span class="normal">240</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">analyze_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">eml_data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;E-posta metadata analizi: SPF, DKIM, DMARC.</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">save_result_to_log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">:</span> <span class="n">ScanResult</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Analiz sonucunu logs/analysis_history.jsonl dosyasına ekler.&quot;&quot;&quot;</span>
+    <span class="n">log_dir</span> <span class="o">=</span> <span class="n">_PROJECT_ROOT</span> <span class="o">/</span> <span class="s2">&quot;logs&quot;</span>
+    <span class="n">log_dir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">log_path</span> <span class="o">=</span> <span class="n">log_dir</span> <span class="o">/</span> <span class="s2">&quot;analysis_history.jsonl&quot;</span>
 
-<span class="sd">    Args:</span>
-<span class="sd">        eml_data: eml_parser.parse_eml() çıktısı.</span>
+    <span class="n">hits</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;hits&quot;</span><span class="p">,</span> <span class="p">{})</span>
+    <span class="n">urls</span> <span class="o">=</span> <span class="n">hits</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;urls&quot;</span><span class="p">,</span> <span class="p">[])</span> <span class="ow">or</span> <span class="p">[]</span>
 
-<span class="sd">    Returns:</span>
-<span class="sd">        (skor, auth_result) - auth_result: email_auth sözlüğü.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">auth</span> <span class="o">=</span> <span class="n">analyze_email_auth</span><span class="p">(</span><span class="n">eml_data</span><span class="p">)</span>
-    <span class="n">score</span> <span class="o">=</span> <span class="n">auth</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;score_added&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">score</span><span class="p">,</span> <span class="n">auth</span>
+    <span class="n">detected_rules</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;words&quot;</span><span class="p">,</span> <span class="s2">&quot;official&quot;</span><span class="p">,</span> <span class="s2">&quot;tlds&quot;</span><span class="p">,</span> <span class="s2">&quot;regex&quot;</span><span class="p">,</span> <span class="s2">&quot;domain_similarity&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;url_heuristics&quot;</span><span class="p">,</span> <span class="s2">&quot;email_auth&quot;</span><span class="p">):</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">hits</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">val</span><span class="p">:</span>
+            <span class="n">detected_rules</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize_for_json</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+
+    <span class="n">brands</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">domain_sim</span> <span class="o">=</span> <span class="n">hits</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;domain_similarity&quot;</span><span class="p">,</span> <span class="p">[])</span> <span class="ow">or</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">domain_sim</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">))</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">known</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">known</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                <span class="n">brand</span> <span class="o">=</span> <span class="n">known</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+                <span class="k">if</span> <span class="n">brand</span> <span class="ow">and</span> <span class="n">brand</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">brands</span><span class="p">:</span>
+                    <span class="n">brands</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">brand</span><span class="p">)</span>
+    <span class="n">official_map</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ptt&quot;</span><span class="p">:</span> <span class="s2">&quot;PTT&quot;</span><span class="p">,</span> <span class="s2">&quot;edevlet&quot;</span><span class="p">:</span> <span class="s2">&quot;E-Devlet&quot;</span><span class="p">,</span> <span class="s2">&quot;e-devlet&quot;</span><span class="p">:</span> <span class="s2">&quot;E-Devlet&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;banka&quot;</span><span class="p">:</span> <span class="s2">&quot;Banka&quot;</span><span class="p">,</span> <span class="s2">&quot;vergi&quot;</span><span class="p">:</span> <span class="s2">&quot;Vergi&quot;</span><span class="p">,</span> <span class="s2">&quot;kargo&quot;</span><span class="p">:</span> <span class="s2">&quot;Kargo&quot;</span><span class="p">,</span> <span class="s2">&quot;icra&quot;</span><span class="p">:</span> <span class="s2">&quot;İcra&quot;</span><span class="p">}</span>
+    <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">hits</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;official&quot;</span><span class="p">,</span> <span class="p">[])</span> <span class="ow">or</span> <span class="p">[]:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">term</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">brand</span> <span class="o">=</span> <span class="n">official_map</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">term</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span> <span class="n">term</span><span class="o">.</span><span class="n">title</span><span class="p">())</span>
+            <span class="k">if</span> <span class="n">brand</span> <span class="ow">and</span> <span class="n">brand</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">brands</span><span class="p">:</span>
+                <span class="n">brands</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">brand</span><span class="p">)</span>
+
+    <span class="n">entry</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">isoformat</span><span class="p">(),</span>
+        <span class="s2">&quot;urls&quot;</span><span class="p">:</span> <span class="n">urls</span><span class="p">,</span>
+        <span class="s2">&quot;risk_score&quot;</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;score&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+        <span class="s2">&quot;risk_level&quot;</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;risk&quot;</span><span class="p">,</span> <span class="s2">&quot;DÜŞÜK&quot;</span><span class="p">),</span>
+        <span class="s2">&quot;detected_rules&quot;</span><span class="p">:</span> <span class="n">detected_rules</span><span class="p">,</span>
+        <span class="s2">&quot;brand&quot;</span><span class="p">:</span> <span class="n">brands</span><span class="p">,</span>
+    <span class="p">}</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">log_path</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">entry</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
             </details>
     </div>
