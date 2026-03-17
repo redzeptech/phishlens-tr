@@ -1,0 +1,9 @@
+# Ekran görüntüleri ve medya burada saklanır.
+# README için gerekli dosyalar:
+#   - terminal_snap.png  (phishlens --stats çıktısı)
+#   - report_sample.png  (PDF raporunun ilk sayfası)
+#   - banner.png         (Opsiyonel: Proje banner görseli)
+#   - demo.mp4          (30 sn tanıtım videosu - Veo ile üretilebilir)
+#
+# stats.json - Haftalık istatistikler (Shields.io badge için)
+#   scripts/update_readme_stats.py tarafından otomatik güncellenir.

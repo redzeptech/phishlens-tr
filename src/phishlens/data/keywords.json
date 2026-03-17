@@ -1,0 +1,79 @@
+{
+  "suspicious_words": [
+    "acil", "hemen", "son uyarı", "hesabınız kapatılacak",
+    "kimlik doğrulama", "ödeme", "borç", "icra", "güncelle",
+    "teslim edilemedi", "paket", "kargonuz", "şifreniz", "doğrulayın",
+    "ceza", "bloke", "askıya alındı", "işleminiz", "onaylayın"
+  ],
+  "suspicious_tlds": [
+    ".xyz", ".top", ".click", ".online", ".site", ".icu", ".info"
+  ],
+  "official_terms": [
+    "ptt", "banka", "edevlet", "e-devlet", "vergi", "kargo", "icra"
+  ],
+  "known_legitimate_domains": [
+    "garanti.com.tr", "yapikredi.com.tr", "isbank.com.tr",
+    "akbank.com", "ziraatbank.com.tr", "qnb.com.tr",
+    "denizbank.com", "teb.com.tr", "halkbank.com.tr",
+    "ptt.gov.tr", "ptten.com", "mngkargo.com.tr",
+    "aras.com.tr", "yurticikargo.com.tr", "hepsiburada.com",
+    "trendyol.com", "n11.com", "gittigidiyor.com",
+    "turkcell.com.tr", "turktelekom.com.tr", "vodafone.com.tr",
+    "google.com", "google.com.tr", "microsoft.com",
+    "edevlet.gov.tr", "gib.gov.tr", "tcmb.gov.tr"
+  ],
+  "regex_rules": [
+    {
+      "pattern": "\\b(kartı(nız|nı)|kartınız)\\s*(bloke|askıya|askıya alındı)\\b",
+      "score": 3,
+      "description": "Banka kartı bloke/askıya alındı ifadesi"
+    },
+    {
+      "pattern": "\\b(iban|hesap)\\s*(doğrulama|güncelleme|güncelle)\\b",
+      "score": 3,
+      "description": "IBAN/hesap doğrulama talebi"
+    },
+    {
+      "pattern": "\\b(otp|doğrulama kodu|şifre|sms kodu)\\s*(girin|gönderin|giriniz)\\b",
+      "score": 3,
+      "description": "OTP/doğrulama kodu giriş talebi"
+    },
+    {
+      "pattern": "\\b(kargo|gönderi)\\s*(takip|yola çıktı|teslimat|numara)\\b",
+      "score": 3,
+      "description": "Kargo takip / teslimat mesajı"
+    },
+    {
+      "pattern": "\\b(son\\s*)?(24\\s*saat|48\\s*saat|gün\\s*içinde)\\b",
+      "score": 3,
+      "description": "Acil süre baskısı"
+    }
+  ],
+  "emotion_risk_keywords": {
+    "aciliyet": [
+      "acil", "hemen", "derhal", "son dakika", "son uyarı",
+      "süre doluyor", "süresi dolmak", "kapatılacak", "askıya alınacak"
+    ],
+    "eylem_talebi": [
+      "giriş yap", "giriş yapın", "tıklayın", "tıklayınız",
+      "doğrulayın", "onaylayın", "güncelleyin", "güncelle",
+      "şifrenizi girin", "otp girin", "kod girin"
+    ],
+    "ödül_hediye": [
+      "hediye", "ödül", "kazandınız", "kazandın", "çekiliş",
+      "kampanya", "indirim", "bedava", "ücretsiz", "bonus"
+    ],
+    "tebrik": [
+      "tebrikler", "tebrik ederiz", "kutluyoruz", "seçildiniz",
+      "ödüle layık", "şanslısınız"
+    ],
+    "tehdit": [
+      "hesabınız kapatılacak", "bloke", "askıya alındı",
+      "borç", "icra", "ceza", "dava"
+    ],
+    "doğrulama": [
+      "kimlik doğrulama", "hesap doğrulama", "kart doğrulama",
+      "telefon doğrulama", "e-posta doğrulama"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+# PyPI paketi için dahil edilecek / hariç tutulacak dosyalar
+
+# Zorunlu dosyalar
+include README.md
+include LICENSE
+include pyproject.toml
+include requirements.txt
+
+# Paket verisi (keywords.json vb.)
+recursive-include src/phishlens/data *.json
+
+# Hariç tutulan klasörler (runtime/development)
+prune logs
+prune assets
+prune tests
+prune wiki
+prune scripts
+prune reports
+prune .github
+prune .pytest_cache
+prune .venv
+prune __pycache__
+
+# Hariç tutulan dosya türleri
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude .env
+global-exclude .env.*
+global-exclude *.egg-info
+global-exclude .eggs
+global-exclude dist
+global-exclude build

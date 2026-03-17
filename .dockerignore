@@ -1,0 +1,36 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.venv
+venv
+env
+.pytest_cache
+*.egg-info
+.eggs
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Test & docs (image boyutunu küçült)
+tests/
+*.md
+!README.md
+
+# Local data (volume ile mount edilecek)
+.env
+history.db
+*.txt
+!requirements.txt
+
+
+# Streamlit cache (config dahil edilir)
+.streamlit/cache
