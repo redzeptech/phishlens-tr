@@ -19,5 +19,5 @@ plugins:
 nav:
   - Giriş: index.md
   - Kurulum: wiki/Kurulum.md
-  - Yapılandırma: wiki/Yapilandirma.md
-  - Özellikler: wiki/Ozellikler.md
+  - Yapilandirma: wiki/Yapilandirma.md
+  - Ozellikler: wiki/Ozellikler.md
