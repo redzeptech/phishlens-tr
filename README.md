@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-
-# <img width="981" height="508" alt="PhishLens" src="https://github.com/user-attachments/assets/178666dc-a811-4494-b8b6-eee5e9cbbf20" />
-
-
-PhishLens TR, eğitim ve farkındalık amaçlı basit bir mesaj analiz aracıdır.
-Şüpheli SMS/e-posta metninde sosyal mühendislik işaretleri ve bağlantı izleri üzerinden kural tabanlı bir risk skoru üretir.
 
 ## Kurulum
 Python 3 yeterlidir.
@@ -98,7 +91,6 @@ Rich ile renkli tablo ve risk çubuğu çıktısı:
 python main.py --stats
 ```
 
-![Terminal Screenshot](assets/terminal_snap.png)
 
 > 💡 **İpucu:** `terminal_snap.png` eklemek için `python main.py --stats` çalıştırıp terminal ekran görüntüsü alın ve `assets/terminal_snap.png` olarak kaydedin.
 
@@ -108,7 +100,6 @@ python main.py --stats
 python main.py --export-pdf
 ```
 
-![PDF Report](assets/report_sample.png)
 
 > 💡 **İpucu:** Oluşturulan PDF'in ilk sayfasının ekran görüntüsünü `assets/report_sample.png` olarak kaydedin.
 
