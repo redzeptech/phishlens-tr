@@ -1,9 +1,9 @@
 {
-  "total": 2,
-  "malicious": 2,
+  "total": 0,
+  "malicious": 0,
   "safe": 0,
-  "threat_rate": 100.0,
-  "security_score": 0.0,
+  "threat_rate": 0.0,
+  "security_score": 100.0,
   "period_days": 7,
-  "last_updated": "2026-03-17T23:51:43Z"
+  "last_updated": "2026-03-23T01:14:14Z"
 }

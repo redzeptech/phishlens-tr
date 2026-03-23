@@ -300,19 +300,7 @@ Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICE
 ---
 
 <!-- PHISHLENS_WEEKLY_STATS_START -->
-### 📊 Haftalık Özet (Son 7 Gün)
-
-| Metrik | Değer |
-|--------|-------|
-| Toplam Tarama | 2 |
-| Yakalanan Tehdit | 2 |
-| Güvenli | 0 |
-| Tehdit Oranı | %100.0 |
-| Güvenlik Skoru | %0.0 |
-
-**En Çok Taklit Edilen Kurumlar:**
-- Garanti: 1
-- Banka: 1
+**Son 7 gün:** Henüz analiz kaydı yok.
 
 <!-- PHISHLENS_WEEKLY_STATS_END -->
 >>>>>>> 225d027 (Initial release: v1.0.0 - Full Phishing Analysis Suite)
